@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PostCard from "../components/PostCard";
+import Postcard from "../components/Postcard";
 import Pagination from "../components/Pagination";
 import { fetchIdeas } from "../util/api";
 
@@ -107,7 +107,7 @@ const loadIdeas = async () => {
         ) : error ? (
           <p className="col-span-full text-center text-red-500">{error}</p>
         ) : posts.length > 0 ? (
-          posts.map((post) => <PostCard key={post.id} post={post} />)
+          posts.map((post) => <Postcard key={post.id} post={post} />)
         ) : (
           <p className="col-span-full text-center text-gray-500">
             Tidak ada data ditemukan.
